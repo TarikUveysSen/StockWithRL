@@ -57,3 +57,39 @@ for patch, bin_value in zip(patches, bins):
         patch.set_facecolor('red')
 
 plt.show()
+
+# Calculate Z-scores for both "Price Change" and "Adj Close"
+z_scores_price_change = stats.zscore(df1['Price Change'])
+z_scores_adj_close = stats.zscore(df1['Adj Close'])
+
+# Create a histogram for Z-scores of Price Change centered around 0
+plt.figure(figsize=(12, 6))
+n, bins, patches = plt.hist(z_scores_price_change, bins=np.arange(-5, 5.5, 0.5), color='blue', alpha=0.7)
+plt.xlabel('Z Score (Price Change)')
+plt.ylabel('Frequency')
+plt.title('Distribution of Z Scores for Price Changes (AAPL)')
+plt.xticks(np.arange(-5, 6, 1))  # Adjust x-axis tick values
+plt.grid(True)
+
+# Highlight the bins around 0 for Price Change
+for patch, bin_value in zip(patches, bins):
+    if bin_value >= -1 and bin_value <= 1:
+        patch.set_facecolor('red')
+
+plt.show()
+
+# Create a histogram for Z-scores of Adj Close centered around 0
+plt.figure(figsize=(12, 6))
+n, bins, patches = plt.hist(z_scores_adj_close, bins=np.arange(-5, 5.5, 0.5), color='green', alpha=0.7)
+plt.xlabel('Z Score (Adj Close)')
+plt.ylabel('Frequency')
+plt.title('Distribution of Z Scores for Adj Close (AAPL)')
+plt.xticks(np.arange(-5, 6, 1))  # Adjust x-axis tick values
+plt.grid(True)
+
+# Highlight the bins around 0 for Adj Close
+for patch, bin_value in zip(patches, bins):
+    if bin_value >= -1 and bin_value <= 1:
+        patch.set_facecolor('orange')
+
+plt.show()
