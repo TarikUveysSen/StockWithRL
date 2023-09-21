@@ -42,3 +42,18 @@ plt.ylabel('Frequency')
 plt.title('Distribution of Price Changes for AAPL')
 plt.grid(True)
 plt.show()
+
+plt.figure(figsize=(10, 6))
+n, bins, patches = plt.hist(data['PriceChange'], bins=np.arange(-0.5, 0.6, 0.1), color='blue', alpha=0.7)
+plt.xlabel('Price Change')
+plt.ylabel('Frequency')
+plt.title('Distribution of Price Changes for AAPL')
+plt.xticks(np.arange(-0.5, 0.6, 0.1))  # Adjust x-axis tick values
+plt.grid(True)
+
+# Highlight the bins around 0
+for patch, bin_value in zip(patches, bins):
+    if bin_value >= -threshold and bin_value <= threshold:
+        patch.set_facecolor('red')
+
+plt.show()
