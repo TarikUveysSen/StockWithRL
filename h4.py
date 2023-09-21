@@ -33,3 +33,12 @@ plt.title('AAPL Stock Price and Trends')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+# Plot a histogram of price changes
+plt.figure(figsize=(10, 6))
+plt.hist(data['PriceChange'], bins=50, color='blue', alpha=0.7)
+plt.xlabel('Price Change')
+plt.ylabel('Frequency')
+plt.title('Distribution of Price Changes for AAPL')
+plt.grid(True)
+plt.show()
