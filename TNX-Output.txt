@@ -1,0 +1,76 @@
+                           Strategy
+-------------------------  ----------
+Start Period               2016-08-04
+End Period                 2023-09-19
+Risk-Free Rate             0.0%
+Time in Market             3.0%
+
+Cumulative Return          45.84%
+CAGR﹪                     3.72%
+
+Sharpe                     0.35
+Prob. Sharpe Ratio         86.9%
+Smart Sharpe               0.35
+Sortino                    0.77
+Smart Sortino              0.77
+Sortino/√2                 0.54
+Smart Sortino/√2           0.54
+Omega                      1.75
+
+Max Drawdown               -83.46%
+Longest DD Days            1749
+Volatility (ann.)          66.48%
+Calmar                     0.04
+Skew                       19.97
+Kurtosis                   739.4
+
+Expected Daily %           0.02%
+Expected Monthly %         0.44%
+Expected Yearly %          4.83%
+Kelly Criterion            24.8%
+Risk of Ruin               0.0%
+Daily Value-at-Risk        -6.8%
+Expected Shortfall (cVaR)  -6.8%
+
+Max Consecutive Wins       1
+Max Consecutive Losses     1
+Gain/Pain Ratio            0.75
+Gain/Pain (1M)             0.76
+
+Payoff Ratio               1.27
+Profit Factor              1.75
+Common Sense Ratio         -
+CPC Index                  1.29
+Tail Ratio                 -
+Outlier Win Ratio          8.82
+Outlier Loss Ratio         -0.0
+
+MTD                        14.8%
+3M                         17.7%
+6M                         17.7%
+YTD                        -2.33%
+1Y                         27.99%
+3Y (ann.)                  46.96%
+5Y (ann.)                  -1.73%
+10Y (ann.)                 3.72%
+All-time (ann.)            3.72%
+
+Best Day                   138.95%
+Worst Day                  -61.51%
+Best Month                 138.95%
+Worst Month                -61.51%
+Best Year                  154.7%
+Worst Year                 -63.44%
+
+Avg. Drawdown              -23.27%
+Avg. Drawdown Days         544
+Recovery Factor            1.88
+Ulcer Index                0.44
+Serenity Index             0.19
+
+Avg. Up Month              18.24%
+Avg. Down Month            -15.89%
+Win Days %                 57.89%
+Win Month %                60.61%
+Win Quarter %              52.17%
+Win Year %                 62.5%
