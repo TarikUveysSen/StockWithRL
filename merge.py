@@ -1,5 +1,3 @@
-import pandas as pd
-
 def join_dataframes(ticker_dict, feature_dict):
     result_df = None
 
@@ -11,14 +9,19 @@ def join_dataframes(ticker_dict, feature_dict):
 
             # Select only the specified columns from the DataFrame using column names
             columns_to_use = feature_dict[key]
-            if isinstance(columns_to_use, list) and all(isinstance(col, str) for col in columns_to_use):
-                df_selected = df_copy[columns_to_use]
+            if isinstance(columns_to_use, list):
+                # Check if all specified columns exist in the DataFrame
+                valid_columns = [col for col in columns_to_use if col in df_copy.columns]
+                if valid_columns:
+                    df_selected = df_copy[valid_columns]
 
-                # Perform the left join operation with indices
-                if result_df is None:
-                    result_df = df_selected
+                    # Perform the left join operation with indices
+                    if result_df is None:
+                        result_df = df_selected
+                    else:
+                        result_df = pd.merge(result_df, df_selected, how='left', left_index=True, right_index=True)
                 else:
-                    result_df = pd.merge(result_df, df_selected, how='left', left_index=True, right_index=True)
+                    print(f"Invalid columns_to_use for key '{key}'. Columns do not exist in the DataFrame.")
             else:
                 print(f"Invalid columns_to_use for key '{key}'. Please provide a list of column names.")
         else:
